@@ -102,8 +102,9 @@ function initProductPage(){
     <div>
       <p class="eyebrow">${tag} · Duskrest</p>
       <h1>${n}</h1>
-      <p class="price">$${price.toFixed(2)}</p>
+      <p class="price">$${price.toFixed(2)}<s class="compare">$${(Math.ceil(price*1.33)-0.05).toFixed(2)}</s></p>
       <p class="pdp-desc">${desc}</p>
+      <div class="qty-row"><span style="font-size:14px">Qty</span><div class="qty"><button type="button" onclick="qtyStep(-1,${price})">−</button><span id="qtyVal">1</span><button type="button" onclick="qtyStep(1,${price})">+</button></div></div>
       <ul class="champ-list">
         ${bullets.map(b=>`<li>${b}</li>`).join("")}
         <li>Ships in 1–3 days · tracked US delivery</li>
@@ -113,6 +114,11 @@ function initProductPage(){
       <a class="btn-ghost" href="shop.html">← Keep browsing</a>
       <p class="cap-note" id="checkout-note" hidden>Checkout opens this week — leave your email on the <a href="contact.html" style="color:var(--amber)">contact page</a> for 10% off code DUSK10 when it does.</p>
       <div class="trust-bar"><span>30-night guarantee</span><span>Free US shipping over $40</span><span>Human support</span></div>
+      <div class="pdp-acc">
+        <details open><summary>Description</summary><p>${desc}</p></details>
+        <details><summary>Shipping & tracking</summary><p>Orders process in 1–3 days and arrive in the US in 5–11 business days with tracking. Free shipping over $40.</p></details>
+        <details><summary>The 30-night guarantee</summary><p>Try it for 30 nights. If your sleep isn't better, email us for a full refund — no forms, no fight.</p></details>
+      </div>
     </div>
   </div></section>
   <section class="shop dimmable"><div class="wrap">
@@ -145,3 +151,9 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 });
 // data-pay anchors are swapped to Stripe Payment Links at launch.
+function qtyStep(d,price){
+  const v=document.getElementById("qtyVal"); let q=Math.max(1,Math.min(10,parseInt(v.textContent,10)+d));
+  v.textContent=q;
+  const btn=document.querySelector('#pdp a.btn');
+  if(btn) btn.textContent=`Buy now — $${(q*price).toFixed(2)}`;
+}

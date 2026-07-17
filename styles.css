@@ -139,3 +139,16 @@ a.card{color:inherit}
 .pdp-desc{margin:6px 0 18px;color:rgba(201,207,219,.85);max-width:52ch}
 .trust-bar{margin-top:26px;display:flex;gap:20px;font-size:13px;color:rgba(201,207,219,.7);flex-wrap:wrap}
 .trust-bar span::before{content:"— ";color:var(--amber)}
+
+/* announce bar, qty, compare price, accordion */
+.announce{background:var(--amber);text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.06em}
+.announce a{color:var(--ink);display:block;padding:8px 16px}
+.compare{color:rgba(201,207,219,.45);text-decoration:line-through;font-size:18px;margin-left:10px}
+.qty-row{display:flex;align-items:center;gap:14px;margin:4px 0 20px}
+.qty{display:flex;align-items:center;border:1px solid rgba(201,207,219,.25);border-radius:999px}
+.qty button{background:none;border:0;color:var(--cream);font-size:18px;width:38px;height:38px;cursor:pointer}
+.qty span{min-width:28px;text-align:center;font-weight:600;color:var(--cream)}
+.pdp-acc{margin-top:30px;border-top:1px solid rgba(201,207,219,.1)}
+.pdp-acc details{border-bottom:1px solid rgba(201,207,219,.1);padding:14px 0}
+.pdp-acc summary{cursor:pointer;font-family:'Sora',sans-serif;color:var(--cream);font-size:15px}
+.pdp-acc p{margin-top:10px;font-size:14.5px;color:rgba(201,207,219,.8);max-width:60ch}
