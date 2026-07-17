@@ -22,7 +22,25 @@ const PRODUCTS=[
  ["Nursery Sound + Night Light",39.95,"Noise","🍼"]
 ];
 
-const IMAGES={ "Contour Blackout Sleep Mask":"mask-1.png" };
+const IMAGES={
+ "Contour Blackout Sleep Mask":"mask-1.png",
+ "Weighted Contour Sleep Mask":"weighted-contour-sleep-mask.png",
+ "White Noise Machine — 20+ sounds":"white-noise-machine-20-sounds.jpg",
+ "Cooling Pillowcase":"cooling-pillowcase.jpg",
+ "Sunrise Alarm Clock":"sunrise-alarm-clock.jpg",
+ "Weighted Lavender Eye Pillow":"weighted-lavender-eye-pillow.jpg",
+ "Premium Foam Earplugs + Case":"premium-foam-earplugs-case.jpg",
+ "Bluetooth Sleep Headband":"bluetooth-sleep-headband.png",
+ "Bamboo Cooling Sheet Set":"bamboo-cooling-sheet-set.jpg",
+ "Magnesium Sleep Body Spray":"magnesium-sleep-body-spray.jpg",
+ "Lavender + Chamomile Pillow Spray":"lavender-chamomile-pillow-spra.jpg",
+ "Side-Sleeper Knee Pillow":"side-sleeper-knee-pillow.jpg",
+ "Cervical Contour Memory Foam Pillow":"cervical-contour-memory-foam-p.jpg",
+ "Travel Blackout Kit":"travel-blackout-kit.jpg",
+ "Nasal Breathing Mouth Tape":"nasal-breathing-mouth-tape.jpg",
+ "Anti-Snore Nose Vents":"anti-snore-nose-vents.jpg",
+ "Nursery Sound + Night Light":"nursery-sound-night-light.jpg"
+};
 function renderGrid(el,items){
   el.innerHTML=items.map(([n,p,t,e],i)=>`
    <div class="card">
