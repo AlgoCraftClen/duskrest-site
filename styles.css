@@ -181,3 +181,8 @@ a.card{color:inherit}
 .about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0}
 .promise{border-left:3px solid var(--amber);padding:6px 0 6px 20px;margin:18px 0;font-size:16px;color:var(--cream)}
 @media (max-width:760px){.about-grid{grid-template-columns:1fr}}
+
+/* vibe photo cards */
+.fw-card.photo{padding:0;overflow:hidden}
+.fw-card.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:saturate(.9) brightness(.92)}
+.fw-card.photo .fw-body{padding:22px 26px 26px}
