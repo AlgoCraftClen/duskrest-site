@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duskrest — Engineered for deeper nights</title>
+<meta name="description" content="Science-backed sleep tools that remove light, noise, and heat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="dimmable" aria-label="Main">
+  <div class="wrap nav-in">
+    <a class="logo" href="index.html">dusk<span>rest</span></a>
+    <div class="nav-links">
+      <a href="mask.html" >The Mask</a><a href="shop.html" >Shop all</a><a href="kits.html" >Kits</a><a href="about.html" >About</a><a href="contact.html" >Contact</a>
+    </div>
+    <a class="nav-cta" href="mask.html">Shop the mask</a>
+  </div>
+</nav>
+<header class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="dimmable">
+      <p class="eyebrow">Sleep, engineered</p>
+      <h1>Your brain wants <em>total darkness</em>. Your bedroom disagrees.</h1>
+      <p class="lead">Duskrest builds simple, science-backed tools that remove the three things wrecking your sleep — light, noise, and heat. No pills. No promises we can't keep.</p>
+      <a class="btn" href="mask.html">Shop the Contour Mask — $29.95</a>
+      <a class="btn-ghost" href="shop.html">Browse all 20 →</a>
+      <div class="guarantee-row">
+        <span>30-night guarantee</span><span>Free US shipping over $40</span><span>Human support</span>
+      </div>
+    </div>
+    <div class="mask-stage">
+      <img class="mask-art" src="mask-1.png" alt="Duskrest Contour Mask" style="border-radius:16px">
+      <div class="switch-row">
+        <span>Lights on</span>
+        <button class="switch" id="lightsSwitch" aria-pressed="false" aria-label="Toggle lights out to preview total darkness"></button>
+        <span>Lights out</span>
+      </div>
+      <p class="stage-caption">Flip the switch. That's what the Contour Mask does to your bedroom — at noon.</p>
+    </div>
+  </div>
+</header>
+
+<section class="framework dimmable">
+  <div class="wrap">
+    <p class="eyebrow">The boring truth about good sleep</p>
+    <h2>Dark. Quiet. Cool. Everything we make attacks one of the three.</h2>
+    <div class="fw-grid">
+      <div class="fw-card"><div class="fw-icon">🌘</div><h3>Light</h3><p>Even closed eyelids register a phone charger's glow. Tiny light leaks keep your brain half-awake. We black them out completely.</p></div>
+      <div class="fw-card"><div class="fw-icon">🌊</div><h3>Noise</h3><p>Your ears never sleep — they just wait for the next door slam. Consistent sound and proper earplugs give them nothing to wait for.</p></div>
+      <div class="fw-card"><div class="fw-icon">❄️</div><h3>Heat</h3><p>Deep sleep drops your body temperature. A hot room fights that drop all night. Cooling fabric lets it happen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="shop dimmable">
+  <div class="wrap">
+    <div class="shop-head">
+      <div><p class="eyebrow">Bestsellers</p><h2>Start where the problem is</h2></div>
+      <a class="btn-ghost" href="shop.html">Shop all 20 →</a>
+    </div>
+    <div class="grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<section class="capture dimmable" id="signup">
+  <div class="wrap">
+    <p class="eyebrow">Before you go</p>
+    <h2>Sleep better tonight. 10% off your first order.</h2>
+    <p>One email with your code, then only what's useful: the occasional sleep-science note. No noise — that would be off-brand.</p>
+    <form class="cap-form" id="capForm">
+      <input type="email" required placeholder="you@example.com" aria-label="Email address">
+      <button type="submit">Send my code</button>
+    </form>
+    <p class="cap-note" id="capNote">Code DUSK10 · Unsubscribe anytime</p>
+  </div>
+</section>
+<footer class="dimmable">
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="logo">dusk<span style="color:var(--amber)">rest</span></div>
+      <div class="foot-links">
+        <a href="shop.html">Shop</a><a href="kits.html">Kits</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <p class="compliance">Duskrest products support comfort and sleep routines; they are not medical devices and do not diagnose, treat, or cure any condition. © 2026 Duskrest.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
