@@ -152,3 +152,32 @@ a.card{color:inherit}
 .pdp-acc details{border-bottom:1px solid rgba(201,207,219,.1);padding:14px 0}
 .pdp-acc summary{cursor:pointer;font-family:'Sora',sans-serif;color:var(--cream);font-size:15px}
 .pdp-acc p{margin-top:10px;font-size:14.5px;color:rgba(201,207,219,.8);max-width:60ch}
+
+/* rich footer */
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;margin-bottom:30px}
+.foot-grid h4{font-family:'Sora',sans-serif;color:var(--cream);font-size:14px;margin-bottom:14px;letter-spacing:.06em;text-transform:uppercase}
+.foot-grid a{display:block;font-size:14px;color:rgba(201,207,219,.75);padding:5px 0}
+.foot-grid a:hover{color:var(--amber)}
+.foot-tag{margin:12px 0 16px;font-size:14px;color:rgba(201,207,219,.7);line-height:1.6}
+.socials{display:flex;gap:14px}
+.socials a{color:var(--silver);padding:4px}
+.socials a:hover{color:var(--amber)}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+
+/* kits */
+.kit-imgs{display:flex;gap:6px;margin-bottom:16px}
+.kit-imgs img{width:33.3%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#fff}
+.bundle .p s{color:rgba(201,207,219,.45);font-size:16px;margin-left:8px}
+.bundle .btn{margin-top:14px;display:inline-block;padding:12px 24px;font-size:14.5px}
+
+/* contact form */
+.contact-form{max-width:560px;display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.contact-form input,.contact-form textarea{background:var(--navy-2);border:1px solid rgba(201,207,219,.2);color:var(--cream);border-radius:12px;padding:14px 16px;font-size:15px;font-family:'Inter',sans-serif}
+.contact-form textarea{min-height:140px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--amber);outline-offset:2px}
+.contact-form button{background:var(--amber);border:0;color:var(--ink);font-weight:600;border-radius:999px;padding:14px 28px;font-size:15px;cursor:pointer;align-self:flex-start}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0}
+.promise{border-left:3px solid var(--amber);padding:6px 0 6px 20px;margin:18px 0;font-size:16px;color:var(--cream)}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}}
