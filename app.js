@@ -92,10 +92,10 @@ function initProductPage(){
   const gal=(GALLERIES[n]||[]).slice(0,4);
   const mainSrc=img||gal[0]||null;
   const thumbs=gal.length>1?'<div class="thumbs" id="galleryThumbs">'+gal.map((u,gi)=>'<img src="'+u+'" data-full="'+u+'" alt="'+n+' photo '+(gi+1)+'"'+(gi===0?' class="active"':'')+'>').join('')+'</div>':'';
-  const media=mainSrc?('<img id="galleryMain" src="'+mainSrc+'" alt="'+n+'">'+thumbs):'<div class="ph pdp-ph"><span class="ph-emoji">'+e+'</span></div>';
+  const media=mainSrc?('<div class="champ-img"><img id="galleryMain" src="'+mainSrc+'" alt="'+n+'"></div>'+thumbs):'<div class="champ-img"><div class="ph pdp-ph"><span class="ph-emoji">'+e+'</span></div></div>';
   root.innerHTML=`
   <section class="champion dimmable"><div class="wrap champ-in">
-    <div class="champ-img">${media}</div>
+    <div>${media}</div>
     <div>
       <p class="eyebrow">${tag} · Duskrest</p>
       <h1>${n}</h1>
