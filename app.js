@@ -53,6 +53,7 @@ const PRODUCTS=[
   "White noise and a soft glow for the smallest sleepers in the house (and their parents).",
   ["Baby-safe sounds + night light","Timer and volume control","Parents sleep too"]]
 ];
+const REVIEWS={}; // {productName:[{stars,name,date,text}]} - REAL verified buyers only, never fabricated
 const PAY={0:"https://buy.stripe.com/aFa9ASgs2aAi8BA1Yj4Ja00"};
 const CHAMPION_GALLERY=["mask-1.png","mask-2.jpg","mask-3.jpg","mask-4.jpg","mask-5.jpg","mask-6.png"];
 
@@ -119,6 +120,17 @@ function initProductPage(){
   </div></section>`;
   const others=PRODUCTS.map((pp,idx)=>({pp,idx})).filter(x=>x.idx!==i).slice(0,4);
   document.getElementById("crossGrid").innerHTML=others.map(x=>cardHTML(x.pp,x.idx)).join("");
+  renderReviews(n);
+}
+function renderReviews(name){
+  const el=document.getElementById("reviewsList"); if(!el) return;
+  const rs=REVIEWS[name]||[];
+  if(!rs.length){ el.innerHTML='<p style="font-size:14px;color:rgba(201,207,219,.7)">No reviews yet - Duskrest only publishes reviews from verified buyers, so the first ones come from real nights of sleep. With the 30-night guarantee, being early costs you nothing.</p>'; return; }
+  el.innerHTML=rs.map(function(r){
+    var stars="";
+    for(var i=0;i<5;i++) stars+= i<r.stars ? "\u2605" : "\u2606";
+    return '<div style="padding:12px 0;border-bottom:1px solid rgba(201,207,219,.08)"><span style="color:var(--amber)">'+stars+'</span> <strong style="color:var(--cream);font-size:14px">'+r.name+'</strong> <span style="font-size:12px;color:rgba(201,207,219,.5)">Verified buyer \u00b7 '+r.date+'</span><p style="font-size:14px;margin-top:6px">'+r.text+'</p></div>';
+  }).join("");
 }
 function checkoutNote(el){ const n=document.getElementById("checkout-note"); if(n){n.hidden=false;} return false; }
 
