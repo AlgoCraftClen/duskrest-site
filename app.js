@@ -62,6 +62,7 @@ const PRODUCTS=[
   "White noise and a soft glow for the smallest sleepers in the house (and their parents).",
   ["Baby-safe sounds + night light","Timer and volume control","Parents sleep too"]]
 ];
+const PAY={0:"https://buy.stripe.com/aFa9ASgs2aAi8BA1Yj4Ja00"};
 const CHAMPION_GALLERY=["mask-1.png","mask-2.jpg","mask-3.jpg","mask-4.jpg","mask-5.jpg","mask-6.png"];
 
 function cardHTML(p,i){
@@ -110,7 +111,7 @@ function initProductPage(){
         <li>Ships in 1–3 days · tracked US delivery</li>
         <li>30-night better-sleep guarantee</li>
       </ul>
-      <a class="btn" data-pay="sku-${i+1}" href="#checkout-note" onclick="return checkoutNote(this)">Buy now — $${price.toFixed(2)}</a>
+      <a class="btn" ${PAY[i]?`href="${PAY[i]}"`:`data-pay="sku-${i+1}" href="#checkout-note" onclick="return checkoutNote(this)"`}>Buy now — $${price.toFixed(2)}</a>
       <a class="btn-ghost" href="shop.html">← Keep browsing</a>
       <p class="cap-note" id="checkout-note" hidden>Checkout opens this week — leave your email on the <a href="contact.html" style="color:var(--amber)">contact page</a> for 10% off code DUSK10 when it does.</p>
       <div class="trust-bar"><span>30-night guarantee</span><span>Free US shipping over $40</span><span>Human support</span></div>
