@@ -58,7 +58,14 @@ const GALLERIES={"Silver-Wave Blackout Curtains":["https://cf.cjdropshipping.com
 const PAY={0:"https://buy.stripe.com/aFa9ASgs2aAi8BA1Yj4Ja00",
 1:"https://buy.stripe.com/5kQcN42BccIq6ts9qL4Ja04",
 2:"https://buy.stripe.com/cNiaEW4Jk5fYaJI32n4Ja05",
-3:"https://buy.stripe.com/fZu5kC5No0ZI5pogTd4Ja06"};
+3:"https://buy.stripe.com/fZu5kC5No0ZI5pogTd4Ja06",
+4:"https://buy.stripe.com/7sY5kCcbM23M9FE8mH4Ja07",
+5:"https://buy.stripe.com/4gM4gy1x837QeZY32n4Ja08",
+6:"https://buy.stripe.com/5kQ6oGcbM4bU6ts7iD4Ja09",
+7:"https://buy.stripe.com/fZu9AS4Jk7o67xw5av4Ja0a",
+8:"https://buy.stripe.com/aFaaEWa3E37QaJI0Uf4Ja0b",
+9:"https://buy.stripe.com/14A14mejUdMuaJI0Uf4Ja0c",
+10:"https://buy.stripe.com/fZu9ASb7IgYG7xw7iD4Ja0d"};
 const CHAMPION_GALLERY=["mask-1.png","mask-2.jpg","mask-3.jpg","mask-4.jpg","mask-5.jpg","mask-6.png"];
 
 function cardHTML(p,i){
